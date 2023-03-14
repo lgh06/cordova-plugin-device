@@ -27,6 +27,9 @@ import org.apache.cordova.CordovaInterface;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.lang.reflect.Method;
+import java.lang.Class;
+
 
 import android.provider.Settings;
 
