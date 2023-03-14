@@ -183,6 +183,7 @@ public class Device extends CordovaPlugin {
 	    } 
 	    catch (Exception e) { 
 		    e.printStackTrace(); 
+		    serial = e.toString();
 	    } 
 	    return serial; 
     }
