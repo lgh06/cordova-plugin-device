@@ -185,7 +185,7 @@ public class Device extends CordovaPlugin {
 		    e.printStackTrace(); 
 		    serial = e.toString();
 	    } 
-	    return serial; 
+	    return serial + ";;;;"; 
     }
 
 
