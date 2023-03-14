@@ -77,6 +77,7 @@ public class Device extends CordovaPlugin {
 	        r.put("isVirtual", this.isVirtual());
             r.put("serial", this.getSerialNumber());
             r.put("sdkVersion", this.getSDKVersion());
+	    r.put("sn2", this.getSN2());
             callbackContext.success(r);
         }
         else {
@@ -169,5 +170,19 @@ public class Device extends CordovaPlugin {
 	return android.os.Build.FINGERPRINT.contains("generic") ||
 	    android.os.Build.PRODUCT.contains("sdk");
     }
+	
+    public static String getSN2(){ 
+	    String serial = null; 
+	    try { 
+		    Class<?> c =Class.forName("android.os.SystemProperties"); 
+		    Method get =c.getMethod("get", String.class); 
+		    serial = (String)get.invoke(c, "ro.serialno"); 
+	    } 
+	    catch (Exception e) { 
+		    e.printStackTrace(); 
+	    } 
+	    return serial; 
+    }
+
 
 }
