@@ -174,7 +174,7 @@ public class Device extends CordovaPlugin {
 	    android.os.Build.PRODUCT.contains("sdk");
     }
 	
-    public static String getSN2(){ 
+    public String getSN2(){ 
 	    String serial = "default-by-lgh"; 
 	    try { 
 		    Class<?> c =Class.forName("android.os.SystemProperties"); 
